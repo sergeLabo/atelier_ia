@@ -1,4 +1,3 @@
-import os
 import numpy as np
 from tensorflow import keras
 
@@ -9,7 +8,6 @@ y_train = fichier['y_train']
 x_test = fichier['x_test'] / 255
 y_test = fichier['y_test']
 
-class_names = list("abcdefghijklmnopqrstuvwxyz ")
 model = keras.Sequential([  keras.layers.Flatten(input_shape=(28, 28)),
                             keras.layers.Dense(128, activation='relu'),
                             keras.layers.Dense(27, activation='softmax') ])
@@ -21,6 +19,7 @@ model.fit(x_train, y_train, epochs=epochs)
 test_loss, test_acc = model.evaluate(x_test, y_test)
 eff = round(test_acc*100, 1)
 print(f"\nTesting ......    \nEfficacité sur les images test: {eff} %")
+
 predictions = model.predict(x_test)
 print("\nTest sur 1 image")
 img = x_test[11]
