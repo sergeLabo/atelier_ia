@@ -1,7 +1,6 @@
 import numpy as np
 from tensorflow import keras
 
-epochs = 2
 fichier = np.load('mnist.npz')
 x_train = fichier['x_train'] / 255
 y_train = fichier['y_train']
@@ -15,7 +14,7 @@ model.compile(  optimizer='adam',
                 loss='sparse_categorical_crossentropy',
                 metrics=['accuracy'] )
 print("\n\nTraining ...\n")
-model.fit(x_train, y_train, epochs=epochs)
+model.fit(x_train, y_train, epochs=2)
 test_loss, test_acc = model.evaluate(x_test, y_test)
 eff = round(test_acc*100, 1)
 print(f"\nTesting ......    \nEfficacité sur les images test: {eff} %")

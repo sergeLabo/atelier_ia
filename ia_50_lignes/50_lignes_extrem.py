@@ -14,4 +14,4 @@ model.compile(  optimizer='adam',
 print("\n\nTraining ...\n")
 model.fit(x_train, y_train, epochs=2)
 test_loss, test_acc = model.evaluate(x_test, y_test)
-print(f"\nTesting ......    \nEfficacité sur les images test: {round(test_acc*100, 1)} %")
+print(f"\nTesting\nEfficacité sur les images test: {round(test_acc*100, 1)} %")
