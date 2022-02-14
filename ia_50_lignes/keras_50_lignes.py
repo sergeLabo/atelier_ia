@@ -35,3 +35,7 @@ for item in predictions_single[0]:
 sort_dct = sorted(dct.items(), key=lambda x: x[1], reverse=True)
 for i in range(10):
     print("        ", sort_dct[i][0], "  ", sort_dct[i][1])
+
+https://fr.wikipedia.org/wiki/Apprentissage_non_supervis%C3%A9
+
+https://le-datascientist.fr/apprentissage-supervise-vs-non-supervise

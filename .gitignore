@@ -4,7 +4,8 @@
 *.geanywb
 
 # divers non suivi
-video/
+video_ok/
+video_bad/
 video_raw/
 bosstondynamc_raw/
 old/
